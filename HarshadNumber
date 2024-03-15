@@ -1,0 +1,22 @@
+public class HarshadNumber {
+    public static boolean isHarshad(int number) {
+        int sum = 0;
+        int originalNumber = number;
+        while (number > 0) {
+            sum += number % 10;
+            number /= 10;
+        }
+
+        return originalNumber % sum == 0;
+    }
+
+    public static void main(String[] args) {
+        int number = 20;
+        if (isHarshad(number)) {
+            System.out.println(number + " is a Harshad number.");
+        }
+ else {
+            System.out.println(number + " is not a Harshad number.");
+        }
+    }
+}
